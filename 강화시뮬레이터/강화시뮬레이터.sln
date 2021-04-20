@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "강화시뮬레이터", "강화시뮬레이터\강화시뮬레이터.vcxproj", "{6E351633-5395-4455-A505-895B6545FC54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E351633-5395-4455-A505-895B6545FC54}.Debug|x64.ActiveCfg = Debug|x64
+		{6E351633-5395-4455-A505-895B6545FC54}.Debug|x64.Build.0 = Debug|x64
+		{6E351633-5395-4455-A505-895B6545FC54}.Debug|x86.ActiveCfg = Debug|Win32
+		{6E351633-5395-4455-A505-895B6545FC54}.Debug|x86.Build.0 = Debug|Win32
+		{6E351633-5395-4455-A505-895B6545FC54}.Release|x64.ActiveCfg = Release|x64
+		{6E351633-5395-4455-A505-895B6545FC54}.Release|x64.Build.0 = Release|x64
+		{6E351633-5395-4455-A505-895B6545FC54}.Release|x86.ActiveCfg = Release|Win32
+		{6E351633-5395-4455-A505-895B6545FC54}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEF73A96-88DD-4FFE-9556-B89AF91F9A16}
+	EndGlobalSection
+EndGlobal
