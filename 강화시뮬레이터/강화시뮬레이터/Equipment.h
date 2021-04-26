@@ -14,5 +14,10 @@ public:
 
 	void SelectWeapon(bool _weapon);
 	void SelectArmor(bool _armor);
+
+protected:
+	int rating = 0;
+	int Enhance = 0;
+	int startforce = 0;
 };
 
