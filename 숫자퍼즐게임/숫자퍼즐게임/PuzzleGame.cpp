@@ -18,7 +18,7 @@ vector<vector<int>> PuzzleGame::Shuffle(vector<vector<int>> &NumList)
 {
 	sort(v.begin(), v.end());
 
-	random_shuffle(v.begin(), v.end() - 1);
+	//random_shuffle(v.begin(), v.end() - 1);
 
 	int a = 0;
 
