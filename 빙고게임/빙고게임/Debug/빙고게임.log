@@ -1,8 +1,8 @@
 ﻿  main.cpp
-E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(17,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(152,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(169,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(185,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(204,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
-E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(216,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(33,12): warning C4244: '인수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(168,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(185,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(201,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(339,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\빙고게임\빙고게임\main.cpp(351,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   빙고게임.vcxproj -> E:\포폴\Portfolio\빙고게임\Debug\빙고게임.exe

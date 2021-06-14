@@ -12,6 +12,22 @@ enum AI_MODE
 	AM_HARD
 };
 
+enum LINE_NUMBER
+{
+	LN_H1,
+	LN_H2,
+	LN_H3,
+	LN_H4,
+	LN_H5,
+	LN_V1,
+	LN_V2,
+	LN_V3,
+	LN_V4,
+	LN_V5,
+	LN_LT,
+	LN_RT
+};
+
 int main()
 {
 	srand(time(NULL));
@@ -196,9 +212,128 @@ int main()
 
 			break;
 		case AM_HARD:
-			break;
-		default:
-			break;
+			int iLine = 0;
+			int iStarCount = 0;
+			int iSaveCount = 0;
+
+			for (int i = 0; i < 5; i++)
+			{
+				iStarCount = 0;
+
+				for (int j = 0; j < 5; j++)
+				{
+					if (AI[i * 5 + j] == INT_MAX)
+					{
+						iStarCount++;
+					}
+				}
+
+				if (iStarCount < 5 && iSaveCount < iStarCount)
+				{
+					iLine = i;
+					iSaveCount = iStarCount;
+				}
+			}
+
+			for (int i = 0; i < 5; i++)
+			{
+				iStarCount = 0;
+
+				for (int j = 0; j < 5; j++)
+				{
+					if (AI[j * 5 + i] == INT_MAX)
+					{
+						iStarCount++;
+					}
+				}
+
+				if (iStarCount < 5 && iSaveCount < iStarCount)
+				{
+					iLine = i + 5;
+					iSaveCount = iStarCount;
+				}
+			}
+
+			iStarCount = 0;
+
+			for (int i = 0; i < 25; i += 6)
+			{
+				if (AI[i] == INT_MAX)
+				{
+					iStarCount++;
+				}
+			}
+
+			if (iStarCount < 5 && iSaveCount < iStarCount)
+			{
+				iLine = LN_LT;
+				iSaveCount = iStarCount;
+			}
+
+
+			iStarCount = 0;
+
+			for (int i = 4; i <= 20; i += 4)
+			{
+				if (AI[i] == INT_MAX)
+				{
+					iStarCount++;
+				}
+			}
+
+			if (iStarCount < 5 && iSaveCount < iStarCount)
+			{
+				iLine = LN_RT;
+				iSaveCount = iStarCount;
+			}
+
+			if (iLine <= LN_H5)
+			{
+				for (int i = 0; i < 5; i++)
+				{
+					if (AI[iLine * 5 + i] != INT_MAX)
+					{
+						input = AI[iLine * 5 + i];
+						break;
+					}
+				}
+			}
+
+			else if (iLine <= LN_V5)
+			{
+				for (int i = 0; i < 5; i++)
+				{
+					if (AI[i * 5 + (iLine - 5)] != INT_MAX)
+					{
+						input = AI[i * 5 + iLine];
+						break;
+					}
+				}
+			}
+
+			else if (iLine == LN_LT)
+			{
+				for (int i = 0; i < 25; i += 6)
+				{
+					if (AI[i] != INT_MAX)
+					{
+						input = AI[i];
+						break;
+					}
+				}
+			}
+
+			else if (iLine == LN_RT)
+			{
+				for (int i = 4; i < 20; i += 4)
+				{
+					if (AI[i] != INT_MAX)
+					{
+						input = AI[i];
+						break;
+					}
+				}
+			}
 		}
 
 		for (int i = 0; i < number.size(); i++)
