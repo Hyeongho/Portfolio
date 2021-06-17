@@ -1,2 +1,5 @@
 ﻿  main.cpp
+E:\포폴\Portfolio\학생관리프로그램\학생관리프로그램\main.cpp(130,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\학생관리프로그램\학생관리프로그램\main.cpp(151,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\학생관리프로그램\학생관리프로그램\main.cpp(178,22): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   학생관리프로그램.vcxproj -> E:\포폴\Portfolio\학생관리프로그램\Debug\학생관리프로그램.exe

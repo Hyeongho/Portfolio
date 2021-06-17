@@ -37,6 +37,8 @@ int main()
 
 	vector<_tagStudent> tStudentArr;
 
+	int iStdNumber = 1;
+
 	while (true)
 	{
 		system("cls");
@@ -75,6 +77,11 @@ int main()
 
 			cout << "================ 학생추가 ================" << endl;
 
+			if (tStudentArr.size() == STUDENT_MAX)
+			{
+				break;
+			}
+
 			_tagStudent StudentArr;
 
 			cout << "이름: ";
@@ -85,18 +92,104 @@ int main()
 			getline(cin, StudentArr.strAddress);
 
 			cout << "전화번호: ";
-			cin.ignore(1024, '\n');
 			getline(cin, StudentArr.strPhoneNumber);
 
+			cout << "국어: ";
+			cin >> StudentArr.iKor;
+
+			cout << "영어: ";
+			cin >> StudentArr.iEng;
+
+			cout << "수학: ";
+			cin >> StudentArr.iMath;
+
+			StudentArr.iTotal = StudentArr.iKor + StudentArr.iEng + StudentArr.iMath;
+
+			StudentArr.fAvg = StudentArr.iTotal / 3.0f;
+
+			StudentArr.iNumber = iStdNumber;
+			iStdNumber++;
+
 			tStudentArr.push_back(StudentArr);
+
+			cout << "학생 추가 완료" << endl;
 
 			break;
 		}
 		case MENU_DELETE:
+		{
+			system("cls");
+
+			cout << "================ 학생탐색 ================" << endl;
+
+			string strSearchName;
+			cin.ignore(1024, '\n');
+			cout << "삭제할 이름을 입력하세요: ";
+			getline(cin, strSearchName);
+
+			for (int i = 0; i < tStudentArr.size(); i++)
+			{
+				if (strSearchName == tStudentArr[i].strName)
+				{
+					tStudentArr.erase(tStudentArr.begin() + i);
+				}
+			}
+
 			break;
+		}			
 		case MENU_SEARCH:
+		{
+			system("cls");
+
+			cout << "================ 학생탐색 ================" << endl;
+
+			string strSearchName;
+			cin.ignore(1024, '\n');
+			cout << "탐색한 이름을 입력하세요: ";
+			getline(cin, strSearchName);
+
+			for (int i = 0; i < tStudentArr.size(); i++)
+			{
+				if (strSearchName == tStudentArr[i].strName)
+				{
+					cout << "이름: " << tStudentArr[i].strName << endl;
+					cout << "전화번호: " << tStudentArr[i].strPhoneNumber << endl;
+					cout << "주소: " << tStudentArr[i].strAddress << endl;
+					cout << "학번: " << tStudentArr[i].iNumber << endl;
+					cout << "국어: " << tStudentArr[i].iKor << endl;
+					cout << "영어: " << tStudentArr[i].iEng << endl;
+					cout << "수학: " << tStudentArr[i].iMath << endl;
+					cout << "총점: " << tStudentArr[i].iTotal << endl;
+					cout << "평균: " << tStudentArr[i].fAvg << endl;
+
+					cout << endl;
+
+					break;
+				}
+			}
+
 			break;
+		}		
 		case MENU_OUTPUT:
+			system("cls");
+
+			cout << "================ 학생출력 ================" << endl;
+
+			for (int i = 0; i < tStudentArr.size(); i++)
+			{
+				cout << "이름: " << tStudentArr[i].strName << endl;
+				cout << "전화번호: " << tStudentArr[i].strPhoneNumber << endl;
+				cout << "주소: " << tStudentArr[i].strAddress << endl;
+				cout << "학번: " << tStudentArr[i].iNumber << endl;
+				cout << "국어: " << tStudentArr[i].iKor << endl;
+				cout << "영어: " << tStudentArr[i].iEng << endl;
+				cout << "수학: " << tStudentArr[i].iMath << endl;
+				cout << "총점: " << tStudentArr[i].iTotal << endl;
+				cout << "평균: " << tStudentArr[i].fAvg << endl;
+
+				cout << endl;
+			}
+
 			break;
 		default:
 			cout << "메뉴를 잘못 선택했습니다." << endl;
