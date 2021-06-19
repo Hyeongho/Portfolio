@@ -1,0 +1,7 @@
+﻿  Book.cpp
+E:\포폴\Portfolio\도서대여프로그램\도서대여프로그램\Book.cpp(26,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\도서대여프로그램\도서대여프로그램\Book.cpp(78,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+E:\포폴\Portfolio\도서대여프로그램\도서대여프로그램\Book.cpp(106,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  main.cpp
+  코드를 생성하고 있습니다...
+  도서대여프로그램.vcxproj -> E:\포폴\Portfolio\도서대여프로그램\Debug\도서대여프로그램.exe
